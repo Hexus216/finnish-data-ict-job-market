@@ -1,0 +1,16 @@
+# Virtuaaliympäristö
+.venv/
+
+# Pythonin automaattisesti luomat välimuistitiedostot
+__pycache__/
+*.py[cod]
+
+# Ympäristömuuttujat ja mahdolliset salaisuudet
+.env
+
+# VS Coden paikalliset asetukset
+.vscode/
+
+# Käyttöjärjestelmän luomat tiedostot
+.DS_Store
+Thumbs.db
