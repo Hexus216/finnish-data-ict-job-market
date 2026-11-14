@@ -1,64 +1,70 @@
-Finnish Data & ICT Job Market Analytics
+# Finnish Data & ICT Job Market Analytics
 
 In this project, Finnish data and ICT job market statistics are collected, processed, stored and visualized.
 
 The data is retrieved from Statistics Finland's PxWeb API. The project focuses on monthly statistics about jobseekers and open vacancies in selected data and ICT occupations in Finland and Uusimaa.
 
-The project structure is
+## Project structure
 
-/
-│── data/
+```text
+finnish-data-ict-job-market/
+├── data/
 │   ├── raw/
 │   │   └── job_market_data.json
 │   └── processed/
 │       └── job_market_data.csv
-│
-│── database/
+├── database/
 │   └── job_market.db
-│
-│── src/
+├── src/
 │   ├── inspect_api.py
 │   ├── extract.py
 │   ├── transform.py
 │   └── database.py
-│
-│── dashboard/
+├── dashboard/
 │   └── app.py
-│
-│── requirements.txt
-│── .gitignore
-│── README.md
+├── requirements.txt
+├── .gitignore
+└── README.md
+```
 
-Instructions
+## Instructions
 
-Clone this repository.
+1. Clone this repository.
 
-Create and activate a virtual environment.
+2. Create and activate a virtual environment.
 
-In cmd:
+In Windows Command Prompt:
 
+```cmd
 python -m venv .venv
 .venv\Scripts\activate
+```
 
-Install the required libraries:
+3. Install the required libraries:
 
+```cmd
 pip install -r requirements.txt
+```
 
-Run the data pipeline in the following order:
+4. Run the data pipeline in the following order:
 
+```cmd
 python src/extract.py
 python src/transform.py
 python src/database.py
+```
 
-Start the dashboard:
+5. Start the dashboard:
 
+```cmd
 streamlit run dashboard/app.py
+```
 
-Open the dashboard in your browser at:
+6. Open the dashboard in your browser at:
 
 http://localhost:8501
 
-Data source
+## Data source
 
 Statistics Finland – PxWeb API
 
